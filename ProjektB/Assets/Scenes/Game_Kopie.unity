@@ -1161,18 +1161,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 249155084}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
 --- !u!114 &148381359
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9059,9 +9047,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 56e641b2b26e34c24aa5395660207a0c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nameText: {fileID: 0}
-  dialogueText: {fileID: 0}
-  animator: {fileID: 0}
+  nameText: {fileID: 1075240535}
+  dialogueText: {fileID: 855195941}
+  dialogImage: {fileID: 249155086}
+  animator: {fileID: 1786007985}
 --- !u!4 &1489159073
 Transform:
   m_ObjectHideFlags: 0

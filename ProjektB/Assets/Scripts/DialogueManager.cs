@@ -2,14 +2,16 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.UI;
 
 public class DialogueManager : MonoBehaviour
 {
     public TMP_Text nameText;
     public TMP_Text dialogueText;
-    private Queue<string> sentences;
+    public Image dialogImage; // Referenz zum Image
 
     public Animator animator;
+    private Queue<string> sentences;
 
     // Start is called before the first frame update
     void Start()
@@ -27,6 +29,12 @@ public class DialogueManager : MonoBehaviour
         foreach (string sentence in dialogue.sentences)
         {
             sentences.Enqueue(sentence);
+        }
+
+        // Aktiviere das Image
+        if (dialogImage != null)
+        {
+            dialogImage.gameObject.SetActive(true);
         }
 
         DisplayNextSentence();
@@ -58,5 +66,11 @@ public class DialogueManager : MonoBehaviour
     void EndDialogue()
     {
         animator.SetBool("IsOpen", false);
+
+        // Deaktiviere das Image
+        if (dialogImage != null)
+        {
+            dialogImage.gameObject.SetActive(false);
+        }
     }
 }
